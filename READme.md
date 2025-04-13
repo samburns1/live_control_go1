@@ -52,7 +52,7 @@ _using a controller is recommended as Mujoco's keybinds intefere with keyboard c
 
 ## For Mac Users
 
-Make sure to have PySDL2 instaled, pygame will _NOT_ work!
+Make sure to have PySDL2 installed, pygame will _NOT_ work!
 
 On macOS, use `mjpython` instead of `python` to run the simulation.
 
