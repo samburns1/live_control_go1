@@ -9,7 +9,7 @@ This repository enables you to load a pre-trained policy for the Unitree Go1's l
 **1. Follow the Instructions on Mujoco Playground**  
 Visit the [Mujoco Playground GitHub page](https://github.com/google-deepmind/mujoco_playground/) and follow the setup instructions.
 
-**2. Clone the Live Control Repository**  
+**2. Clone the Live Control Repository and Change to ```live_control```**  
 After setting up Mujoco Playground, navigate to its main directory and clone this repository:
 
 ```bash
@@ -20,18 +20,12 @@ git clone https://github.com/yourusername/live_control_go1.git
 
 ## To load the trained policy and start the live viewer:
 
-**1. Change to ```live_control```**  
-```bash
-cd path/to/mujoco_playground
-git clone https://github.com/yourusername/live_control_go1.git
-```
-
-**2a. To run live control with a connected controller:**
+**a. To run live control with a connected controller:**
 ```bash
 python controller_live_control.py --env_name=Go1JoystickFlatTerrain --load_checkpoint_path=load_me/checkpoints --play_only
 ```
 
-**2b. To run live control with a connected keyboard:**
+**b. To run live control with a connected keyboard:**
 ```bash
 python keyboard_live_control.py --env_name=Go1JoystickFlatTerrain --load_checkpoint_path=load_me/checkpoints --play_only
 ```
