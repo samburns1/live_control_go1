@@ -35,7 +35,9 @@ python controller_live_control.py --env_name=Go1JoystickFlatTerrain --load_check
 ```bash
 python keyboard_live_control.py --env_name=Go1JoystickFlatTerrain --load_checkpoint_path=load_me/checkpoints --play_only
 ```
-<div style="color: red; font-weight: bold;">note: using a controller is recommended as Mujoco's keybinds intefere with keyboard controls</div>
+*using a controller is recommended as Mujoco's keybinds intefere with keyboard controls!!*
+
+
 
 
 ## NOTES:
