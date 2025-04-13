@@ -415,14 +415,21 @@ def main(argv):
   if "steps_until_next_cmd" in state.info:
     state.info["steps_until_next_cmd"] = 9999999
 
+    
     # --------------------------------------------------------------------------------
     # define a helper function: update_observation_with_command
-    # this function updates the environment state's observation by inserting the new command (the action we input with the keyboard).
-    # it either re-computes the observation using the env's _get_obs or get_obs method, or directly replaces the command field.
-    def update_observation_with_command(env_state, command):
-        """update the state observation with the new command."""
-        new_info = dict(env_state.info)  # copy the current info to avoid modifying original data directly
-        new_info["command"] = command  # update the command in this copied info
+    # this function takes in the current environment state (which contains various pieces of information, including the current "command")
+    # and a new command (for example, a new velocity vector that we got from the keyboard).
+    # it makes a copy of the state's info (a dictionary holding extra state data) and replaces the "command" with the new one.
+    # then it re-computes the observation so that the policy (the neural network controlling the robot) sees this updated command.
+    #
+    # why do we need this? the observation that the policy uses is generated from both the raw sensor data and the info dictionary.
+    # the command is a part of that info. if we want the policy to respond immediately to our keyboard inputs,
+    # we must ensure that the observation includes the new command. this function helps enforce that.
+  def update_observation_with_command(env_state, command):
+    """update the state observation with the new command."""
+    new_info = dict(env_state.info)  # copy the current info to avoid modifying original data directly
+    new_info["command"] = command  # update the command in this copied info
 
     try:
         if hasattr(eval_env, "_get_obs"):
