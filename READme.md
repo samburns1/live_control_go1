@@ -20,7 +20,7 @@ cd path/to/mujoco_playground
 git clone https://github.com/yourusername/live_control_go1.git
 ```
 
-**4. Mac Compatibility**
+**4. Mac Compatibility:**
 See bottom
 
 ## To load the trained policy and start the live viewer:
