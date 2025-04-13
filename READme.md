@@ -35,7 +35,7 @@ python keyboard_live_control.py --env_name=Go1JoystickFlatTerrain --load_checkpo
 
 
 ## NOTES:
-**1.** The pre-trained policy is saved in load_me directory
+**1.** The pre-trained policy is saved in load_me directory \n
 **2.** Go1JoystickFlatTerrain loads this xml: /mujoco_playground/mujoco_playground/_src/locomotion/go1/xmls/scene_mjx_feetonly_flat_terrain.xml
 **3.** The rough terrain works for the same policy, to use simply change "--env_name=Go1JoystickFlatTerrain" to "--env_name=Go1JoystickRoughTerrain" in initial call
 **4.** To use controller, make sure to ```bash pip install pygame``` in your enviornment
