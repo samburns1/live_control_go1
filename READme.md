@@ -41,4 +41,4 @@ python keyboard_live_control.py --env_name=Go1JoystickFlatTerrain --load_checkpo
 
 **3.** The rough terrain works for the same policy, to use simply change "--env_name=Go1JoystickFlatTerrain" to "--env_name=Go1JoystickRoughTerrain" in initial call
 
-**4.** To use controller, make sure to ```bash pip install pygame``` in your enviornment
+**4.** To use controller, make sure to ```pip install pygame``` in your environment
