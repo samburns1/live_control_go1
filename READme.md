@@ -47,9 +47,12 @@ _using a controller is recommended as Mujoco's keybinds intefere with keyboard c
 
 **3.** The rough terrain works for the same policy, to use simply change "--env_name=Go1JoystickFlatTerrain" to "--env_name=Go1JoystickRoughTerrain" in initial call
 
-**4.** To use controller, make sure to `pip install pygame` in your environment
+**4a.** To use controller, make sure to `pip install pygame` in your environment
+**4b.** On Mac, to use controller, make sure to `pip install pysdl2` in your environment
 
 ## For Mac Users
+
+Make sure to have PySDL2 instaled, pygame will _NOT_ work!
 
 On macOS, use `mjpython` instead of `python` to run the simulation.
 
@@ -60,7 +63,7 @@ Also, use the checkpoint directory designated for Mac (e.g., `mac_load_me/checkp
 **a. To run live control with a connected controller:**
 
 ```bash
-mjpython controller_live_control.py --env_name=Go1JoystickFlatTerrain --load_checkpoint_path=mac_load_me/checkpoints --play_only
+mjpython mac_controller_live_control.py --env_name=Go1JoystickFlatTerrain --load_checkpoint_path=mac_load_me/checkpoints --play_only
 ```
 
 **b. To run live control with a connected keyboard:**
