@@ -12,6 +12,9 @@ Visit the [Mujoco Playground GitHub page](https://github.com/google-deepmind/muj
 **2. Clone the Live Control Repository and Change to ```live_control```**  
 After setting up Mujoco Playground, navigate to its main directory and clone this repository:
 
+**3. Brax==0.12.1**
+Downgrade Brax if needed ```pip install brax==0.12.1```
+
 ```bash
 cd path/to/mujoco_playground
 git clone https://github.com/yourusername/live_control_go1.git
