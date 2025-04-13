@@ -52,7 +52,7 @@ xla_flags = os.environ.get("XLA_FLAGS", "")
 xla_flags += " --xla_gpu_triton_gemm_any=True"
 os.environ["XLA_FLAGS"] = xla_flags
 os.environ["XLA_PYTHON_CLIENT_PREALLOCATE"] = "false"
-os.environ["MUJOCO_GL"] = "egl"
+os.environ["MUJOCO_GL"] = "metal"
 
 logging.set_verbosity(logging.WARNING)
 warnings.filterwarnings("ignore", category=RuntimeWarning, module="jax")
